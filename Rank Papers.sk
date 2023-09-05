@@ -1,0 +1,7 @@
+on rightclick:
+    set {_item} to name of player's tool
+    if player's tool is paper named {_item}:
+        execute console command "/pr createrank %{_item}%"
+        execute console command "/pr setrank %name of player% %{_item}%"
+        send "Your rank has been set to %{_item}%!" to player
+        remove 1 paper named "%{_item}%" from player's inventory
