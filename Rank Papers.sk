@@ -5,3 +5,8 @@ on rightclick:
         execute console command "/pr setrank %name of player% %{_item}%"
         send "Your rank has been set to %{_item}%!" to player
         remove 1 paper named "%{_item}%" from player's inventory
+on rightclick on anvil:
+    if player has permission "use.anvil":
+    if player does not have permission "use.anvil":
+        cancel event
+        send "You do not have permission to use this anvil."
